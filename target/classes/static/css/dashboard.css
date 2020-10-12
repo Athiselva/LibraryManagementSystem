@@ -1,0 +1,59 @@
+@charset "ISO-8859-1";
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	
+}
+
+.boxcontainer {
+	font: 1rem/1.5 "PT Sans", Arial, sans-serif;
+}
+
+.boxcontainer .greybox {
+	position: relative;
+	width: calc(259px - 15px);
+	height: calc(139px - 15px);
+	border: 1px solid #ccc;
+	background: #e9e9e9;
+	float: left;
+	margin: 15px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.boxcontainer .yellowbox {
+	position: relative;
+	width: calc(259px - 15px);
+	height: calc(139px - 15px);
+	border: 1px solid #ccc;
+	background: #ffff61;
+	float: left;
+	margin: 15px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.boxcontainer .greenbox {
+	position: relative;
+	width: calc(259px - 15px);
+	height: calc(139px - 15px);
+	border: 1px solid #ccc;
+	background: #4dff4d;
+	float: left;
+	margin: 15px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.boxcontainer .redbox {
+	position: relative;
+	width: calc(259px - 15px);
+	height: calc(139px - 15px);
+	border: 1px solid #ccc;
+	background: #ff5c33;
+	float: left;
+	margin: 15px;
+	box-sizing: border-box;
+	overflow: hidden;
+}

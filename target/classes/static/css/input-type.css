@@ -1,0 +1,88 @@
+@charset "ISO-8859-1";
+.text {
+  width: 20%;
+  padding: 5px 5px;
+  margin: 8px 0;
+  border-radius: 15px;
+  font: 1rem/1.5 "PT Sans", Arial, sans-serif;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0s;
+  transition: 0s;
+  outline: none;
+}
+
+.text:focus {
+  border: 3px solid #555;
+}
+
+.password {
+  width: 20%;
+  padding: 5px 5px;
+  margin: 8px 0;
+  border-radius: 15px;
+  font: 1rem/1.5 "PT Sans", Arial, sans-serif;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0s;
+  transition: 0s;
+  outline: none;
+}
+
+.password:focus {
+  border: 3px solid #555;
+}
+
+.number {
+  width: 20%;
+  padding: 5px 5px;
+  margin: 8px 0;
+  border-radius: 15px;
+  font: 1rem/1.5 "PT Sans", Arial, sans-serif;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0s;
+  transition: 0s;
+  outline: none;
+}
+
+.number:focus {
+  border: 3px solid #555;
+}
+
+.file {
+  outline: none;
+  width: 20%;
+  padding: 4px 4px;
+  margin: 8px 0;
+  border-radius: 15px;
+  box-sizing: border-box;
+  font: 1rem/1.5 "PT Sans", Arial, sans-serif;
+  border: 3px solid #ccc;
+  -webkit-transition: 0s;
+  transition: 0s;
+  outline: none;
+}
+
+.file:focus {
+  border: 3px solid #555;
+  color: black;
+}
+
+.submit {
+  width: auto;
+  padding: 4px 4px;
+  margin: 8px 0;
+  border-radius: 15px;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  font: 1rem/1.5 "PT Sans", Arial, sans-serif;
+  -webkit-transition: 0s;
+  transition: 0s;
+  outline: none;
+}
+
+.submit:focus {
+  border: 3px solid #555;
+  color: black;
+}

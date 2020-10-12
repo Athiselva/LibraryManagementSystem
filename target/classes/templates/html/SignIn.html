@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Sign In</title>
+<link th:href="@{/css/input-type.css}" rel="stylesheet" />
+<link th:href="@{/css/buttons.css}" rel="stylesheet" />
+<link th:href="@{/css/fonts.css}" rel="stylesheet" />
+<link th:href="@{/css/alert.css}" rel="stylesheet" />
+</head>
+<body>
+	<div align="center">
+		<p class="arial-header">SignIn</p>
+		<form th:action="@{/home}" th:object="${librarian}" method="POST">
+			<input type="text" class="text" th:field="*{username}" placeholder="Username"
+				id="username" name ="username"><br>
+			<input type="password" class="password" th:field="*{password}" id="password"
+				name="password" placeholder="Password" /><br>
+				
+			<button type="submit" class = "button buttonblack">Sign In</button>
+		</form>
+		<br>
+		<br>
+		<a th:href="@{/}"> Back to Home</a>
+	</div>
+</body>
+</html>

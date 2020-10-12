@@ -1,0 +1,33 @@
+@charset "ISO-8859-1";
+#table1 {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+#table1 td, #table1 th {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+#table1 tr:hover {
+background-color: #ddd;
+border-collapse: collapse;
+}
+
+#table1 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #212938;
+  color: white;
+}
+
+.serial {
+  counter-reset: serial-number;  /* Set the serial number counter to 0 */
+}
+
+.serial td:first-child:before {
+  counter-increment: serial-number;  /* Increment the serial number counter */
+  content: counter(serial-number);  /* Display the counter */
+}

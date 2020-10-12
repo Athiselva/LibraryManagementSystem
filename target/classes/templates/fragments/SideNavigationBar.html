@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title></title>
+</head>
+<body>
+
+	<div id="sidenavigationbar" th:fragment="sidenav" class="sidenav">
+		<br><br><br><br><br><br>
+		<a th:href="@{/home/addauthor}"> Add Author </a>
+		<a th:href="@{/home/addbook}"> Add Book </a>
+		<a th:href="@{/home/viewallauthors}"> View All Authors </a>
+		<a th:href="@{/home/viewallbooks}"> View All Books </a> 
+		<a th:href="@{/home/searchbooks}"> Search Books </a> 
+		<a th:href="@{/home/addmember}"> Add Member </a>
+		<a th:href="@{/home/updatemember}"> Update Member </a>
+		<a th:href="@{/home/transactions}">New Transactions </a>
+		<a th:href="@{/home/transactions}">View All Transactions </a>
+		<a th:href="@{/home/myprofile}">My Profile</a>
+		<a th:href="@{/signout}"> Sign Out </a>
+	</div>
+</body>
+</html>

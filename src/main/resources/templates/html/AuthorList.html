@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link th:href="@{/css/header.css}" rel="stylesheet" />
+<link th:href="@{/css/sidebar.css}" rel="stylesheet" />
+<link th:href="@{/css/buttons.css}" rel="stylesheet" />
+<link th:href="@{/css/fragment-orientation.css}" rel="stylesheet" />
+<link th:href="@{/css/tables.css}" rel="stylesheet" />
+<link th:href="@{/css/fonts.css}" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>Authors List</title>
+</head>
+<body>
+<div th:replace = "fragments/SideNavigationBar :: sidenav"></div>
+<form th:action="@{/home/listauthoraction}" th:object="${author}"  method="POST">
+<div class="container" align="center">
+<p class="arial-header">Authors List</p>
+</div>
+<table id="table1" class="content serial">
+<thead>
+  <tr>
+  	<th>Sl No.</th>
+    <th>Author Id</th>
+    <th>Author Name</th>
+    <th>Book Count</th>
+    <th>Section Code</th>
+    <th>Registered On</th>
+    <th>Registered By</th>
+    <th>Last Modified On</th>
+    <th>Last Modified By</th>
+   <th>View Author Books</th>
+    <th><input type="checkbox" onclick="toggleDelete(this);" />Delete all Authors<br /></th>
+  </tr>
+  </thead>
+  <tbody>
+  <th:block th:each="author : ${authorsList}">
+    <tr>
+    	<td></td>
+        <td th:text="${author.authorId}"></td>
+        <td th:text="${author.authorName}"></td>
+        <td th:text="${author.bookCount}"></td>
+        <td th:text="${author.sectionCode}"></td>
+        <td th:text="${author.createdOn}"></td>
+        <td th:text="${author.createdBy}"></td>
+        <td th:text="${author.lastModifiedOn}"></td>
+        <td th:text="${author.lastModifiedBy}"></td>
+        <td> <input th:type="radio" th:id="${author.authorName}" th:field="${author.viewList}" th:value="${author.authorId}"/></td>
+        <td> <input th:type="checkbox" th:id="${author.authorName}" th:field="${author.deleteList}" th:value="${author.authorId}"/></td>
+       
+    </tr>
+</th:block>
+</tbody>
+</table>
+<input type="hidden" th:field="*{actionType}" id = "actionType"/><br>
+<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;&emsp;
+<button type="submit" id = "view" onmouseover="setActionTypeValue('View')" class = "button buttonblack content">View</button>
+&emsp;&emsp;&emsp;
+<button type="submit" id = "delete" onmouseover="setActionTypeValue('Delete')" class = "button buttonblack content">Delete</button>
+</form>
+</body>
+<script type="text/javascript">
+
+function setActionTypeValue(value){
+	$("#actionType").val(value);
+}
+
+function toggleDelete(source) {
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i] != source)
+            checkboxes[i].checked = source.checked;
+    }
+}
+</script>
+</html>

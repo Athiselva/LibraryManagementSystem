@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Search Books</title>
+<link th:href="@{/css/input-type.css}" rel="stylesheet" />
+<link th:href="@{/css/buttons.css}" rel="stylesheet" />
+<link th:href="@{/css/fonts.css}" rel="stylesheet" />
+<link th:href="@{/css/alert.css}" rel="stylesheet" />
+<link th:href="@{/css/sidebar.css}" rel="stylesheet" />
+<link th:href="@{/css/fragment-orientation.css}" rel="stylesheet" />
+<link th:href="@{/css/header.css}" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<div th:replace = "fragments/SideNavigationBar :: sidenav"></div>
+	<div class="container" align="center">
+		<p class="arial-header">Search Books</p>
+		<form action="#" th:action="@{/home/searchBooksByName}" th:object="${book}"
+			method="POST">
+			<input type="text" class="text" th:field="*{bookName}" id = "bookName" placeholder="Book Name" th:required="required"/><br>
+			
+			<button type="submit" id = "submit" class = "button buttonblack">Search</button>
+		</form>
+
+		<br><br>
+		<a th:href="@{/signout}">Sign out</a>
+	</div>
+</body>
+<script>
+$(document).ready(function(){
+	$("input:text").val('');
+});
+</script>
+</html>

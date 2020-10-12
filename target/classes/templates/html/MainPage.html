@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>National Library of India</title>
+<link th:href="@{/css/topbar.css}" rel="stylesheet" />
+</head>
+<body style="background-color:black;">
+
+	<div class="topnav">
+		<a href="#">Contact us</a> 
+		<a href="#">About us</a> 
+		<a th:href="@{/createanaccount}">Sign up</a> 
+		<a th:href="@{/signin}">Sign in</a>
+	</div>
+
+	<div>
+		<img th:src="@{/img/Home-img.jpg}" width="1366" height="605" style="opacity: 0.5;" />
+	</div>
+
+</body>
+</html>
